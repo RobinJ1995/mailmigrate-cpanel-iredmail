@@ -58,7 +58,7 @@ do
 		if [ $exists -eq 0 ]
 		then
 			echo "Creating domain $domain..."
-			$mysqlcommand -e "INSERT INTO domain (domain, settings, created) VALUES ('$domain', 'default_user_quota:100;', NOW());"
+			$mysqlcommand -e "INSERT INTO domain (domain, settings, created) VALUES ('$domain', 'default_user_quota:$quota;', NOW());"
 		fi
 	
 		# Insert user if it doesn't exist yet
