@@ -11,5 +11,5 @@
 
 ## Note
 
-These scripts have been written for a very specific setup, and are unlikely to work for any other setups. The only scenario where this script will work is if you wish to migrate all your e-mail addresses from a CPanel server to an iRedMail server with MariaDB/MySQL. It also only supports MD5 and SHA512 password hashes, but it wouldn't take much to add support for others. I haven't looked into where/how CPanel stores catch-all e-mail addresses, but the scripts haven't been tested with those, either.
+These scripts have been written for a very specific setup, and are unlikely to work for any other setups. The only scenario where this script will work is if you wish to migrate all your e-mail addresses from a CPanel server to an iRedMail server with MariaDB/MySQL. I haven't looked into where/how CPanel stores catch-all e-mail addresses, but the scripts haven't been tested with those, either.
 

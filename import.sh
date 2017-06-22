@@ -26,15 +26,11 @@ do
 		dir=
 	
 		# Convert hash
-		if [[ $old_hash == \$6* ]]
+		if [[ $old_hash == \!\!* ]] # CPanel's way of disabling an account
 		then
-			hash={SHA512}`echo $old_hash | cut -c4-`
-		elif [[ $old_hash == \$1* ]]
-		then
-			hash={MD5}`echo $old_hash | cut -c4-`
-		else
-			continue # Probably starts with !!, which is CPanel's way of disabling an account
+			continue;
 		fi
+		hash={CRYPT}$old_hash
 	
 		# Maildir format
 		if [[ $maildir_style == 'hashed' ]]
