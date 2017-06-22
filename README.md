@@ -1,4 +1,4 @@
-# Migrate e-mail from CPanel to iRedMail
+# Migrate e-mail addresses/forwards from CPanel to iRedMail
 
 `export.sh` outputs a list of all e-mail addresses and forwarders on a CPanel server in a format which `import.sh` can import into iRedMail (SQL).
 
