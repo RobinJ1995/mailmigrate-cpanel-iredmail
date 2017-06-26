@@ -2,6 +2,10 @@
 
 `export.sh` outputs a list of all e-mail addresses and forwarders on a CPanel server in a format which `import.sh` can import into iRedMail (SQL).
 
+`maildirs.sh` is a helper script to be run on the source server which will output all e-mail addresses followed by their maildir path. This can be used for copying mailbox contents over to the new server.
+
+`copy_maildirs.sh` can use the output of `maildirs.sh` (see `config.sh`) to copy maildir contents from the source server to the target server. This script is to be executed on the target server and requires rsync to be installed on both servers, and assumes the target server can SSH into the source server withotu the need for a password (if not: `ssh-copy-id`).
+
 ## Usage
 
 1. On the source server, run `bash export.sh > exported`.

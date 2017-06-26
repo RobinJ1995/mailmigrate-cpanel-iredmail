@@ -5,3 +5,5 @@ maildir_style=hashed # hashed/normal
 mysql_username=root
 mysql_password=
 mysql_database=vmail
+maildirs_sourcefile=maildirs # File with the output of maildirs.sh
+maildirs_sourceserver=root@sourceserver

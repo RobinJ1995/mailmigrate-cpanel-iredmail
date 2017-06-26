@@ -76,5 +76,13 @@ do
 	then
 		echo "Creating alias $email -> $alias_target..."
 		$mysqlcommand -e "INSERT INTO alias (address, goto, domain, created) VALUES ('$email', '$alias_target', '$domain', NOW());"
+	else
+		existing_targets=`$mysqlcommand -e "SELECT goto FROM alias WHERE address = \"$email\";"`
+		
+		if [[ ! $existing_targets == *$alias_target* ]]
+		then
+			echo "Adding alias target $alias_target to $email..."
+			$mysqlcommand -e "UPDATE alias SET goto = CONCAT(goto, ',', '$alias_target') WHERE address = '$email';"
+		fi
 	fi
 done
