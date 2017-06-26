@@ -47,7 +47,7 @@ do
 			done
 		fi
 	
-		dir=$dir$username-$date/
+		dir=$dir$username-$domain-$date/
 	
 		# Insert domain if it doesn't exist yet
 		exists=`$mysqlcommand -e "SELECT COUNT(*) FROM domain WHERE domain = \"$domain\";"`
