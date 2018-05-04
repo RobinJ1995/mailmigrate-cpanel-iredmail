@@ -11,7 +11,7 @@
 1. On the source server, run `bash export.sh > exported`.
 2. Copy `exported` into the same folder as the `import.sh` script (and `config.sh`) on the target iRedMail (SQL) server.
 3. Set the correct parameters in `config.sh` on the target server.
-4. Run `config.sh` on the target server.
+4. Run `import.sh` on the target server.
 
 ## Note
 
